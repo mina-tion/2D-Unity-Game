@@ -56,27 +56,38 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Scriptable obj\TextAssetValue.cs" />
     <Compile Include="Assets\Scripts\Objects\LocationMove.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem\ResponseObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\Scriptable obj\Item.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Scripts\Scriptable obj\Inventory.cs" />
     <Compile Include="Assets\Scripts\GameStuff\Room.cs" />
     <Compile Include="Assets\Scripts\Scriptable obj\LootTable.cs" />
     <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
     <Compile Include="Assets\Scripts\Objects\Sign.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Objects\Powerup.cs" />
     <Compile Include="Assets\Scripts\Objects\TreasureChest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\GameStuff\Signals.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem\DialogObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scripts\Scriptable obj\Notification.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Scripts\GameStuff\GameSaveManager.cs" />
     <Compile Include="Assets\Scripts\GameStuff\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Scriptable obj\NotificationListener.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
     <Compile Include="Assets\Scripts\GameStuff\CameraMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Scriptable obj\VectorValue.cs" />
@@ -92,6 +103,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem\BranchingDialogController.cs" />
     <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\Log.cs" />
@@ -99,11 +111,13 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventorySaver.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Objects\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\GameStuff\SignalListener.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem\DialogNPC.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -118,10 +132,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Objects\Pot.cs" />
-    <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
-    <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
-    <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\InputName.cs" />
+    <Compile Include="Assets\Scripts\Scriptable obj\StringValue.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -355,6 +368,9 @@
     <Reference Include="PsdPlugin">
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
+    <Reference Include="InkEditor">
+      <HintPath>Library\ScriptAssemblies\InkEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
@@ -387,9 +403,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="InkEditor">
-      <HintPath>Library\ScriptAssemblies\InkEditor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>G:\Unity\2020.1.15f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -768,13 +781,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="SuperTiled2Unity.csproj">
-      <Project>{6348B5D4-7693-8CBC-B414-15771ADE739B}</Project>
-      <Name>SuperTiled2Unity</Name>
-    </ProjectReference>
     <ProjectReference Include="Ink-Libraries.csproj">
       <Project>{D4B27207-E45A-74C7-7B79-63D69FEBCDA8}</Project>
       <Name>Ink-Libraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="SuperTiled2Unity.csproj">
+      <Project>{6348B5D4-7693-8CBC-B414-15771ADE739B}</Project>
+      <Name>SuperTiled2Unity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
